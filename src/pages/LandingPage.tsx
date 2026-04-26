@@ -2,10 +2,15 @@ import { useState } from 'react';
 import { ShoppingCart, ChevronLeft, ChevronRight, Check } from 'lucide-react';
 import heroImage from "../assets/images/GOJ_3134.jpg"; 
 import submenu1 from "../assets/images/Submenu/GOJ_6728.jpg"; 
-import submenu2 from "../assets/images/Submenu/GOJ_6977.jpg"; 
+import detailsubmenu1 from "../assets/images/Submenu/GOJ_3159.jpg"; 
+import submenu2 from "../assets/images/Submenu/GOJ_6977.jpg";
+import detailsubmenu2 from "../assets/images/Submenu/GOJ_6988.jpg";
 import submenu3 from "../assets/images/Submenu/GOJ_6892.jpg"; 
+import detailsubmenu3 from "../assets/images/Submenu/GOJ_6896.jpg"; 
 import submenu4 from "../assets/images/Submenu/GOJ_6838.jpg"; 
+import detailsubmenu4 from "../assets/images/Submenu/GOJ_6866.jpg"; 
 import submenu5 from "../assets/images/Submenu/GOJ_3247.jpg"; 
+import detailsubmenu5 from "../assets/images/Submenu/GOJ_3220.jpg"; 
 import ctaBanner from "../assets/images/GOJ_3170.jpg"; 
 type CategoryId = 'vegan' | 'healthy' | 'fast' | 'no-sugar' | 'light';
 
@@ -46,7 +51,7 @@ const menuCatalog: Record<CategoryId, MenuItem> = {
     subtitle: 'Herb quinoa, roasted vegetables and avocado finished with lemon dressing.',
     price: 16.99,
     heroImage: submenu1,
-    detailImage: submenu1,
+    detailImage: detailsubmenu1,
     description: [
       'A bright plant-forward bowl built with quinoa, roasted vegetables and fresh seasonal greens.',
       'Creamy avocado, toasted seeds and citrus herbs keep it satisfying without feeling heavy.',
@@ -68,7 +73,7 @@ const menuCatalog: Record<CategoryId, MenuItem> = {
     subtitle: 'Spiced garlic chicken rolled with ricotta and paired with fresh greens.',
     price: 18.99,
     heroImage: submenu2,
-    detailImage: submenu2,
+    detailImage: detailsubmenu2,
     description: [
       'Tender chicken cutlets are filled with ricotta, herbs and a touch of nutmeg before being rolled and roasted.',
       'It arrives with greens and a light savory sauce to keep the plate balanced and high in protein.',
@@ -90,7 +95,7 @@ const menuCatalog: Record<CategoryId, MenuItem> = {
     subtitle: 'A quick bowl of pasta, grilled chicken and basil tomato sauce.',
     price: 17.49,
     heroImage: submenu3,
-    detailImage: submenu3,
+    detailImage: detailsubmenu3,
     description: [
       'Designed for fast service, this bowl layers pasta with grilled chicken and a rich tomato base.',
       'Fresh basil and shaved parmesan add aroma and depth without slowing down the plate.',
@@ -112,7 +117,7 @@ const menuCatalog: Record<CategoryId, MenuItem> = {
     subtitle: 'Roasted salmon with greens, herbs and a naturally bright citrus finish.',
     price: 21.5,
     heroImage: submenu4,
-    detailImage: submenu4,
+    detailImage: detailsubmenu4,
     description: [
       'This clean plate focuses on roasted salmon, crisp greens and a dressing built without added sugar.',
       'Fresh citrus, dill and olive oil bring enough flavor to keep every bite sharp and balanced.',
@@ -134,7 +139,7 @@ const menuCatalog: Record<CategoryId, MenuItem> = {
     subtitle: 'Leafy greens, herbs, feta and crisp vegetables with a light vinaigrette.',
     price: 15.75,
     heroImage: submenu5,
-    detailImage: submenu5,
+    detailImage: detailsubmenu5,
     description: [
       'A lighter menu option with crisp lettuce, cucumber, herbs and a clean vinaigrette.',
       'Feta and toasted seeds give the salad enough richness while keeping the finish fresh.',
