@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Menu, UtensilsCrossed, X } from 'lucide-react';
-
+import logo from "../assets/images/Varivo_LOGO_RGB_boja.png"; 
 const navItems = [
   { page: 'landing', label: 'Menu' },
   { page: 'cart', label: 'Shopping cart' },
@@ -34,7 +34,7 @@ export default function Header({
   return (
     <>
       <header className="w-full bg-white relative z-[100] shadow-[0_2px_15px_rgb(0,0,0,0.03)] border-b border-gray-100">
-        <div className="max-w-[1600px] mx-auto px-6 py-[30px] lg:py-[22px] flex items-center justify-end relative">
+        <div className="max-w-[1600px] mx-auto px-6 py-[50px] lg:py-[40px] flex items-center justify-end relative">
           <button
             type="button"
             onClick={() => setIsMobileMenuOpen(true)}
@@ -45,15 +45,15 @@ export default function Header({
           </button>
 
           <div
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center cursor-pointer"
-            onClick={() => handleNavigate('landing')}
-          >
-            <div className="text-[#E86F24] mb-0.5">
-              <UtensilsCrossed size={32} strokeWidth={1.2} />
-            </div>
-            <span className="text-[12px] font-bold tracking-[0.25em] text-gray-900 uppercase leading-none">Varivo</span>
-            <span className="text-[7px] tracking-[0.3em] font-bold text-[#E86F24] uppercase mt-1 leading-none">Bistro</span>
-          </div>
+  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+  onClick={() => handleNavigate('landing')}
+>
+  <img
+    src={logo}
+    alt="Varivo Logo"
+    className="h-40 lg:h-44 w-auto object-contain"
+  />
+</div>
 
           <nav className="hidden lg:flex items-center gap-10 text-[15px] font-serif font-medium text-gray-900 pr-2">
             {navItems.map((item) => (

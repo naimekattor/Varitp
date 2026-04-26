@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import { ShoppingCart, ChevronLeft, ChevronRight, Check } from 'lucide-react';
-
+import heroImage from "../assets/images/GOJ_3134.jpg"; 
+import submenu1 from "../assets/images/Submenu/GOJ_6728.jpg"; 
+import submenu2 from "../assets/images/Submenu/GOJ_6977.jpg"; 
+import submenu3 from "../assets/images/Submenu/GOJ_6892.jpg"; 
+import submenu4 from "../assets/images/Submenu/GOJ_6838.jpg"; 
+import submenu5 from "../assets/images/Submenu/GOJ_3247.jpg"; 
+import ctaBanner from "../assets/images/GOJ_3170.jpg"; 
 type CategoryId = 'vegan' | 'healthy' | 'fast' | 'no-sugar' | 'light';
 
 type Ingredient = {
@@ -27,11 +33,11 @@ type MenuItem = {
 };
 
 const menuCategories: Array<{ id: CategoryId; name: string; img: string }> = [
-  { id: 'vegan', name: 'Vegan', img: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=150&q=60' },
-  { id: 'healthy', name: 'Healthy', img: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=150&q=60' },
-  { id: 'fast', name: 'Fast', img: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=150&q=60' },
-  { id: 'no-sugar', name: 'No sugar', img: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=150&q=60' },
-  { id: 'light', name: 'Light', img: 'https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=150&q=60' },
+  { id: 'vegan', name: 'Vegan', img: submenu1 },
+  { id: 'healthy', name: 'Healthy', img: submenu2 },
+  { id: 'fast', name: 'Fast', img: submenu3 },
+  { id: 'no-sugar', name: 'No sugar', img: submenu4 },
+  { id: 'light', name: 'Light', img: submenu5 },
 ];
 
 const menuCatalog: Record<CategoryId, MenuItem> = {
@@ -39,8 +45,8 @@ const menuCatalog: Record<CategoryId, MenuItem> = {
     title: 'Garden Bowl with Avocado',
     subtitle: 'Herb quinoa, roasted vegetables and avocado finished with lemon dressing.',
     price: 16.99,
-    heroImage: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=80',
-    detailImage: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80',
+    heroImage: submenu1,
+    detailImage: submenu1,
     description: [
       'A bright plant-forward bowl built with quinoa, roasted vegetables and fresh seasonal greens.',
       'Creamy avocado, toasted seeds and citrus herbs keep it satisfying without feeling heavy.',
@@ -61,8 +67,8 @@ const menuCatalog: Record<CategoryId, MenuItem> = {
     title: 'Chicken Roll with Ricotta',
     subtitle: 'Spiced garlic chicken rolled with ricotta and paired with fresh greens.',
     price: 18.99,
-    heroImage: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1000&q=80',
-    detailImage: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80',
+    heroImage: submenu2,
+    detailImage: submenu2,
     description: [
       'Tender chicken cutlets are filled with ricotta, herbs and a touch of nutmeg before being rolled and roasted.',
       'It arrives with greens and a light savory sauce to keep the plate balanced and high in protein.',
@@ -83,8 +89,8 @@ const menuCatalog: Record<CategoryId, MenuItem> = {
     title: 'Fire-Grilled Pasta Bowl',
     subtitle: 'A quick bowl of pasta, grilled chicken and basil tomato sauce.',
     price: 17.49,
-    heroImage: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1000&q=80',
-    detailImage: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=900&q=80',
+    heroImage: submenu3,
+    detailImage: submenu3,
     description: [
       'Designed for fast service, this bowl layers pasta with grilled chicken and a rich tomato base.',
       'Fresh basil and shaved parmesan add aroma and depth without slowing down the plate.',
@@ -105,8 +111,8 @@ const menuCatalog: Record<CategoryId, MenuItem> = {
     title: 'Citrus Salmon Plate',
     subtitle: 'Roasted salmon with greens, herbs and a naturally bright citrus finish.',
     price: 21.5,
-    heroImage: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=1000&q=80',
-    detailImage: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=900&q=80',
+    heroImage: submenu4,
+    detailImage: submenu4,
     description: [
       'This clean plate focuses on roasted salmon, crisp greens and a dressing built without added sugar.',
       'Fresh citrus, dill and olive oil bring enough flavor to keep every bite sharp and balanced.',
@@ -127,8 +133,8 @@ const menuCatalog: Record<CategoryId, MenuItem> = {
     title: 'Summer Salad with Feta',
     subtitle: 'Leafy greens, herbs, feta and crisp vegetables with a light vinaigrette.',
     price: 15.75,
-    heroImage: 'https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=1000&q=80',
-    detailImage: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=900&q=80',
+    heroImage: submenu5,
+    detailImage: submenu5,
     description: [
       'A lighter menu option with crisp lettuce, cucumber, herbs and a clean vinaigrette.',
       'Feta and toasted seeds give the salad enough richness while keeping the finish fresh.',
@@ -236,38 +242,37 @@ export default function LandingPage({ onNavigate }: { onNavigate: (page: string)
           </button>
         </div>
 
-        {/* Right Content - Giant Bowl */}
         <div className="w-full lg:w-[55%] mt-20 lg:mt-0 relative flex justify-center lg:justify-end z-10">
           <div className="relative w-[350px] h-[350px] sm:w-[500px] sm:h-[500px] lg:w-[650px] lg:h-[650px]">
             {/* The giant bowl */}
             <div className="absolute inset-0 rounded-full shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] z-10 bg-white flex items-center justify-center">
               <div className="w-[98%] h-[98%] rounded-full overflow-hidden">
-                 <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1600&q=80" alt="Varivo Special Dish" className="w-full h-full object-cover scale-[1.02]" />
+                 <img src={heroImage} alt="Varivo Special Dish" className="w-full h-full object-cover scale-[1.02]" />
               </div>
             </div>
 
             {/* Floating mini bowls */}
             <div className="absolute top-[65%] -left-6 sm:-left-16 w-[70px] h-[70px] sm:w-[110px] sm:h-[110px] rounded-full shadow-2xl overflow-hidden z-20 transition-transform bg-white p-[3px]">
               <div className="w-full h-full rounded-full overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=300&q=80" alt="Salad" className="w-full h-full object-cover scale-110" />
+                <img src={submenu1} alt="Salad" className="w-full h-full object-cover scale-110" />
               </div>
             </div>
 
             <div className="absolute -bottom-8 left-16 sm:bottom-0 sm:left-32 w-[60px] h-[60px] sm:w-[90px] sm:h-[90px] rounded-full shadow-2xl overflow-hidden z-20 bg-white p-[3px]">
               <div className="w-full h-full rounded-full overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=300&q=80" alt="Grilled" className="w-full h-full object-cover scale-110" />
+                <img src={submenu2} alt="Grilled" className="w-full h-full object-cover scale-110" />
               </div>
             </div>
 
             <div className="absolute -bottom-12 right-24 sm:-bottom-8 sm:right-32 w-[55px] h-[55px] sm:w-[80px] sm:h-[80px] rounded-full shadow-2xl overflow-hidden z-20 bg-white p-[3px]">
               <div className="w-full h-full rounded-full overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=300&q=80" alt="Healthy Plate" className="w-full h-full object-cover scale-110" />
+                <img src={submenu3} alt="Healthy Plate" className="w-full h-full object-cover scale-110" />
               </div>
             </div>
 
             <div className="absolute top-[25%] -right-8 sm:-right-16 w-[65px] h-[65px] sm:w-[100px] sm:h-[100px] rounded-full shadow-2xl overflow-hidden z-20 bg-white p-[3px]">
               <div className="w-full h-full rounded-full overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=300&q=80" alt="Fresh Meal" className="w-full h-full object-cover scale-110" />
+                <img src={submenu4} alt="Fresh Meal" className="w-full h-full object-cover scale-110" />
               </div>
             </div>
           </div>
@@ -438,7 +443,7 @@ export default function LandingPage({ onNavigate }: { onNavigate: (page: string)
       {/* CTA Footer Banner */}
       <section className="relative w-full min-h-[290px] md:min-h-[320px] flex items-center justify-center overflow-hidden mb-0">
         <img
-          src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=2000&q=80"
+          src={ctaBanner}
           alt="Pot"
           className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.72]"
         />

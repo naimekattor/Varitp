@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { MapPin, Phone, Lock, Eye, EyeOff, Sparkles, UtensilsCrossed, User, Mail, ArrowLeft, X, ArrowRight } from 'lucide-react';
-
+import signInImage from "../assets/images/GOJ_3289.jpg"
+import signUpImage from "../assets/images/GOJ_7329.jpg"
 export type AuthViewState = 'signup' | 'signin' | 'forgot-password' | 'otp' | 'reset-password';
 const OTP_LENGTH = 5;
 const createEmptyOtp = () => Array.from({ length: OTP_LENGTH }, () => '');
@@ -530,7 +531,7 @@ export default function AuthPage({
           <div className="absolute inset-0 transition-opacity duration-700 ease-in-out" style={{ opacity: isSignIn ? 1 : 0 }}>
             {/* Sign In Image */}
             <img
-              src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=1200"
+              src={signInImage}
               alt="Artisan Bread"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />
@@ -539,7 +540,7 @@ export default function AuthPage({
           <div className="absolute inset-0 transition-opacity duration-700 ease-in-out" style={{ opacity: isSignUp ? 1 : 0 }}>
             {/* Sign Up Image */}
             <img
-              src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&q=80&w=1200"
+              src={signUpImage}
               alt="Traditional Food"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />

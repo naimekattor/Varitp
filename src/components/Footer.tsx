@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Linkedin, Send, UtensilsCrossed } from 'lucide-react';
+import logo from "../assets/images/Varivo_LOGO_RGB_boja.png"; 
 
 export default function Footer() {
   return (
@@ -8,13 +9,13 @@ export default function Footer() {
         {/* Top part of footer */}
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start mb-20 gap-10">
           <div className="flex flex-col items-center md:items-start text-center md:text-left text-gray-900">
-             <div className="flex flex-col items-center text-[#E86F24] mb-4">
-               <div className="relative">
-                 <UtensilsCrossed size={48} strokeWidth={1} />
-               </div>
-               <span className="text-[20px] font-bold tracking-[0.2em] mt-2 text-gray-900 uppercase">Varivo</span>
-               <span className="text-[10px] font-bold tracking-widest text-[#E86F24]">BISTRO</span>
-             </div>
+             <div className="flex justify-center mb-4">
+  <img
+    src={logo}
+    alt="Varivo Bistro Logo"
+    className="h-40 lg:h-44 w-auto object-contain"
+  />
+</div>
              <p className="text-[14px] text-gray-400 font-light max-w-[200px] mt-2 leading-relaxed">
                Discover a World of food with Varivo bistro.
              </p>
