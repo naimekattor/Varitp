@@ -22,8 +22,8 @@ export default function Footer() {
           </div>
           
           <div className="md:w-1/2 w-full pt-4">
-             <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] tracking-tight text-gray-800 text-center md:text-right border-b border-gray-200 pb-6 md:pb-8 font-medium">
-               hello@Varivo bristro..com
+             <h2 className="text-xl md:text-2xl tracking-tight text-gray-800 text-center md:text-right border-b border-gray-200 pb-6 md:pb-8 font-medium">
+               hello@varivobristro.com
              </h2>
           </div>
         </div>
